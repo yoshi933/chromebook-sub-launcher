@@ -1,2 +1,34 @@
-# chromebook-sub-launcher
-Chromebook向けの、設定可能なサブランチャーPWA。単一HTMLで動作しGitHub Pagesで公開できます。
+# My Chromebook Launcher
+
+Chromebookのシェルフに固定したアプリやショートカットを、Chromebook風の画面でまとめて起動するサブランチャーです。**単一の `index.html`** だけで動作し、データはブラウザのローカルストレージに保存されます。
+
+## できること
+
+- アプリ／ショートカットの追加・編集・削除
+- 名前、URL、アイコンURL（または絵文字）、メモの設定
+- ドラッグ＆ドロップによる並び替え
+- 星ボタンによる上部固定
+- 最近使ったアプリの表示
+- アプリ名・URL・メモの検索（`Ctrl` / `⌘` + `K`）
+- JSONで設定をバックアップ／別のChromebookへ移行
+- スマートフォン・Chromebookの画面幅に対応
+
+## GitHub Pagesで公開
+
+1. GitHubの **Settings → Pages** を開く
+2. **Build and deployment** で **Source: GitHub Actions** を選ぶ
+3. `Deploy to GitHub Pages` ワークフローが完了すると、次のURLで利用できます
+
+   `https://yoshi933.github.io/chromebook-sub-launcher/`
+
+4. ChromebookでURLを開き、Chromeのメニューから **「保存して共有」→「ページをアプリとしてインストール」**（またはショートカット作成）を選びます。
+
+## 使い方
+
+最初からサンプルアプリが4件入っています。右上の **アプリを追加** から自分のPWAやショートカットを登録してください。アイコンURLを空欄にすると、サイトのファビコンを自動取得します。
+
+設定はそのブラウザ内だけに保存されます。端末変更やデータ消去に備えて、**アプリを管理 → JSONを書き出す** を利用してください。
+
+## 注意
+
+外部サイトのファビコンやURLがHTTPSでない場合、サイト側の設定によってはアイコンが表示されないことがあります。起動時は新しいタブで登録URLを開きます。
